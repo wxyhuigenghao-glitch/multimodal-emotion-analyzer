@@ -156,7 +156,7 @@ def analyze_emotion(
                     "data": frame["base64_jpeg"],
                 })
 
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.0-flash")
     response = model.generate_content(content_parts)
 
     return _parse_result(response.text)
