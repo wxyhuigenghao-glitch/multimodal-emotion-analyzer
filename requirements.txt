@@ -6,7 +6,7 @@ python-dotenv>=1.0.0
 openai-whisper>=20231117
 
 # Video/Image processing
-opencv-python>=4.9.0
+opencv-python-headless>=4.9.0
 Pillow>=10.0.0
 
 # LLM API
