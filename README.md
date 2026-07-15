@@ -22,8 +22,6 @@ A lightweight, open-source tool for analyzing human emotional states from **vide
 │  💡 Summary: ...                    │
 └─────────────────────────────────────┘
 ```
-**[🚀 在线体验 Demo](https://multimodal-emotion-analyzer-gqwxiszsbab79kkipgcy2h.streamlit.app/)**
-
 ---
 
 ## 🏗 Architecture
@@ -60,14 +58,61 @@ A lightweight, open-source tool for analyzing human emotional states from **vide
 ```
 
 ---
+
+## 🗺 Roadmap
+
+This demo is **Stage 1** of a broader research agenda:
+
+### Stage 1 — Current (Demo)
+- [x] Manual video upload + heart rate text input
+- [x] Whisper speech transcription
+- [x] Key frame extraction with face detection
+- [x] Gemini multimodal emotion analysis
+- [x] Streamlit UI + HTML report export
+
+### Stage 2 — Real-world Signal Collection
+- [ ] Replace manual HR input with wearable sensor integration (BLE/ANT+)
+- [ ] Support real-time webcam + microphone stream
+- [ ] Add GSR (galvanic skin response) as additional physiological channel
+
+### Stage 3 — Model Specialization
+- [ ] Collect labeled multimodal samples via controlled experiments
+- [ ] Fine-tune emotion classification model on domain-specific data
+- [ ] Benchmark against general-purpose models
+
+### Stage 4 — Interaction Strategy Generation
+- [ ] Map [emotion type × level] → interaction strategy taxonomy
+- [ ] Implement strategy output for AI assistant (voice/text)
+- [ ] Explore embodied interaction for social robots
+
+### Stage 5 — Personal Memory Augmentation
+- [ ] Build per-user emotion history profile
+- [ ] Use retrieval-augmented generation (RAG) to personalize emotion interpretation
+- [ ] "This user tends to underreport anxiety — adjust calibration accordingly"
+
+---
+
+## 📦 Tech Stack
+
+| Component | Library | Role |
+|-----------|---------|------|
+| Speech-to-Text | `openai-whisper` | Transcribe audio from video |
+| Video Processing | `opencv-python` | Extract key frames, detect faces |
+| Multimodal LLM | `google-generativeai` (Gemini 1.5 Flash) | Fuse signals, reason about emotion |
+| UI | `streamlit` | Web interface |
+| Visualization | Chart.js + Tailwind CSS | HTML report rendering |
+
 ---
 
 ## 🚀 Quick Start
 
+**[🚀 Try Demo online ](https://multimodal-emotion-analyzer-gqwxiszsbab79kkipgcy2h.streamlit.app/)**
+
+**or test locally** 
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/multimodal-emotion-analyzer.git
+git clone https://github.com/wxyhuigenghao-glitch/multimodal-emotion-analyzer.git
 cd multimodal-emotion-analyzer
 ```
 
@@ -101,18 +146,6 @@ Open `http://localhost:8501` in your browser.
 
 ---
 
-## 📦 Tech Stack
-
-| Component | Library | Role |
-|-----------|---------|------|
-| Speech-to-Text | `openai-whisper` | Transcribe audio from video |
-| Video Processing | `opencv-python` | Extract key frames, detect faces |
-| Multimodal LLM | `google-generativeai` (Gemini 1.5 Flash) | Fuse signals, reason about emotion |
-| UI | `streamlit` | Web interface |
-| Visualization | Chart.js + Tailwind CSS | HTML report rendering |
-
----
-
 ## 📊 Output Format
 
 The LLM returns a structured JSON:
@@ -131,40 +164,6 @@ The LLM returns a structured JSON:
   "interaction_suggestion": "Use a calm, low-pace voice response. Offer structured options rather than open questions."
 }
 ```
-
----
-
-## 🗺 Roadmap
-
-This demo is **Stage 1** of a broader research agenda:
-
-### Stage 1 — Current (Demo)
-- [x] Manual video upload + heart rate text input
-- [x] Whisper speech transcription
-- [x] Key frame extraction with face detection
-- [x] Gemini multimodal emotion analysis
-- [x] Streamlit UI + HTML report export
-
-### Stage 2 — Real-world Signal Collection
-- [ ] Replace manual HR input with wearable sensor integration (BLE/ANT+)
-- [ ] Support real-time webcam + microphone stream
-- [ ] Add GSR (galvanic skin response) as additional physiological channel
-
-### Stage 3 — Model Specialization
-- [ ] Collect labeled multimodal samples via controlled experiments
-- [ ] Fine-tune emotion classification model on domain-specific data
-- [ ] Benchmark against general-purpose models
-
-### Stage 4 — Interaction Strategy Generation
-- [ ] Map [emotion type × level] → interaction strategy taxonomy
-- [ ] Implement strategy output for AI assistant (voice/text)
-- [ ] Explore embodied interaction for social robots
-
-### Stage 5 — Personal Memory Augmentation
-- [ ] Build per-user emotion history profile
-- [ ] Use retrieval-augmented generation (RAG) to personalize emotion interpretation
-- [ ] "This user tends to underreport anxiety — adjust calibration accordingly"
-
 ---
 
 ## ⚠ Limitations
