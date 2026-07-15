@@ -54,7 +54,7 @@ with st.sidebar:
         "and heart rate data to analyze emotional state using a multimodal LLM."
     )
     st.markdown(
-        "[GitHub](https://github.com/YOUR_USERNAME/multimodal-emotion-analyzer)"
+        "[GitHub](https://github.com/wxyhuigenghao-glitch/multimodal-emotion-analyzer)"
     )
 
 # Main input area
