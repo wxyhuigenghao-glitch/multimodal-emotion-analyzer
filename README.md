@@ -22,7 +22,7 @@ A lightweight, open-source tool for analyzing human emotional states from **vide
 │  💡 Summary: ...                    │
 └─────────────────────────────────────┘
 ```
-click to try：https://multimodal-emotion-analyzer-gqwxiszsbab79kkipgcy2h.streamlit.app/
+**[🚀 在线体验 Demo](https://multimodal-emotion-analyzer-gqwxiszsbab79kkipgcy2h.streamlit.app/)**
 
 ---
 
